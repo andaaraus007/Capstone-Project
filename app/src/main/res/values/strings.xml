@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">49ers.com RSS</string>
+    <string name="tab_news">News</string>
+    <string name="tab_photo">Photo</string>
+    <string name="tab_video">Video</string>
+    <string name="tab_audio">Audio</string>
+    <string name="tab_favorite">Favorite</string>
 </resources>
