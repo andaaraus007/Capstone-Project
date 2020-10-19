@@ -5,4 +5,9 @@
     <string name="tab_video">Video</string>
     <string name="tab_audio">Audio</string>
     <string name="tab_favorite">Favorite</string>
+    <string name="title_activity_detailed">DetailedActivity</string>
+    <string name="rss_feed_type">Rss Feed Type</string>
+    <string name="app_name_widget_title">49ers.com RSS Favorites</string>
+    <string name="app_detailed_activity_title_format">%s : %s</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 </resources>

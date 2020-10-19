@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="red_500">#FF5252</color>
-    <color name="red_700">#D32F2F</color>
-    <color name="red_900">#C40E0E</color>
-    <color name="green_a400">#2FD45D</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="grey_50">#FAFAFA</color>
+    <color name="red_700">#AA0000</color>
+    <color name="red_900">#730000</color>
+    <color name="green_a400">#05E343</color>
 </resources>

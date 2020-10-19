@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "893389564621",
+    "firebase_url": "https://a49ers-rss.firebaseio.com",
+    "project_id": "a49ers-rss",
+    "storage_bucket": "a49ers-rss.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893389564621:android:e52188d6abb0c7c401d784",
+        "android_client_info": {
+          "package_name": "com.udacity.a49erscomrss"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893389564621-vmtr25nt60o7u6drf8757gpbkhbn904s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpknqwLdcO1AlyP1EDydsQWAN3XlYyNv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893389564621-vmtr25nt60o7u6drf8757gpbkhbn904s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
