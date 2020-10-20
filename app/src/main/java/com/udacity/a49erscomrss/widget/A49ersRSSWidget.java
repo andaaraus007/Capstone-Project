@@ -6,7 +6,6 @@ import android.appwidget.AppWidgetProvider;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.widget.RemoteViews;
 
 import androidx.core.app.TaskStackBuilder;
@@ -19,7 +18,6 @@ import com.udacity.a49erscomrss.activity.MainActivity;
  * Implementation of App Widget functionality.
  */
 public class A49ersRSSWidget extends AppWidgetProvider {
-    private static final String TAG = "[Widget]" + A49ersRSSWidget.class.getSimpleName();
     public static final String EXTRA_FROM_WIDGET = "from_widget";
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
@@ -49,7 +47,6 @@ public class A49ersRSSWidget extends AppWidgetProvider {
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         // There may be multiple widgets active, so update all of them
         for (int appWidgetId : appWidgetIds) {
-            Log.d(TAG, "onUpdate: " + appWidgetId);
             updateAppWidget(context, appWidgetManager, appWidgetId);
         }
     }
@@ -57,7 +54,6 @@ public class A49ersRSSWidget extends AppWidgetProvider {
     @Override
     public void onReceive(Context context, Intent intent) {
         final String action = intent.getAction();
-        Log.d(TAG, "onReceive: ");
         if (action != null && action.equals(AppWidgetManager.ACTION_APPWIDGET_UPDATE)) {
             // refresh all your widgets
             AppWidgetManager mgr = AppWidgetManager.getInstance(context);
@@ -69,7 +65,6 @@ public class A49ersRSSWidget extends AppWidgetProvider {
     }
 
     public static void sendRefreshBroadcast(Context context) {
-        Log.d(TAG, "sendRefreshBroadcast: ");
         Intent intent = new Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
         intent.setComponent(new ComponentName(context, A49ersRSSWidget.class));
         context.sendBroadcast(intent);

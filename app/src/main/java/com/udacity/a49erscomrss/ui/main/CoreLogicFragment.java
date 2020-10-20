@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +33,6 @@ import retrofit2.Response;
  * A fragment representing a list of Items.
  */
 public abstract class CoreLogicFragment extends Fragment implements RssItemAdapter.ListItemClickListener{
-    private static final String TAG = "[DEBUG] " + CoreLogicFragment.class.getSimpleName();
     private static final int PORTRAIT_COLUMNS = 1;
     private static final int LANDSCAPE_COLUMNS = 2;
     private static final int TABLET_PORTRAIT_COLUMNS = 2;
@@ -96,19 +94,12 @@ public abstract class CoreLogicFragment extends Fragment implements RssItemAdapt
                             }
                         }
                     }
-                } else {
-                    Log.d(TAG, "onResponse: " + response.errorBody());
                 }
             }
 
             @Override
             @EverythingIsNonNull
             public void onFailure(Call<RssFeed> call, Throwable t) {
-                if (call.isCanceled()) {
-                    Log.d(TAG, "onFailure: Call was cancelled forcefully");
-                } else {
-                    Log.d(TAG, "Network Error :: " + t.getLocalizedMessage());
-                }
             }
         });
     }
@@ -116,7 +107,6 @@ public abstract class CoreLogicFragment extends Fragment implements RssItemAdapt
     private void setSavedStatus() {
         MainViewModel viewModel = new ViewModelProvider(this).get(MainViewModel.class);
         viewModel.getRssItems().observe(this, rssItemEntries -> {
-            Log.d(TAG, "Actively retrieving from LiveData");
             List<String> savedRssItemGuids = new ArrayList<>();
             for (int i = 0; i < rssItemEntries.size(); i++) {
                 RssItemEntry rssItemEntry = rssItemEntries.get(i);
